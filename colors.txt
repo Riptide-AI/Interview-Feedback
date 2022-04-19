@@ -1,0 +1,7 @@
+main : #1976D2
+secondary: #A3ADBB
+disabled: #F7F8F9
+action-btn : #FFA000
+main-light: #F5F8FE
+success: #8BC34A 
+danger: #E53935
