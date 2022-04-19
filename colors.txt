@@ -5,3 +5,4 @@ action-btn : #FFA000
 main-light: #F5F8FE
 success: #8BC34A 
 danger: #E53935
+main-bg-color: #FFFFFF
