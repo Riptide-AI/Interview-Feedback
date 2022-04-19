@@ -10,8 +10,7 @@ function App() {
       </div>
       <div className={appStyles.contentWrapper}>
         <div className={appStyles.content}>
-          {" "}
-          <h2 className={appStyles.contentTitle}>Interview Feedback</h2>{" "}
+          <h2 className={appStyles.contentTitle}>Interview Feedback</h2>
         </div>
         <div className={appStyles.content}> </div>
       </div>
