@@ -1,24 +1,21 @@
 {
-   "extends": [
-     "eslint:recommended",
-     "plugin:react/recommended",
-     "airbnb",
-     "prettier"
-   ],
-   "plugins": [
-     "react",
-     "prettier"
-   ],
-   "rules": {
-     "semi": 0,
-     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-     "react/prop-types" : 0,
-     "arrow-body-style": ["error", "always"],
-     "no-unused-expressions": 0
-   },
-   "env": {
-      "browser": true,
-      "es2021": true,
-      "node": true
-    }
- }
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier"
+  ],
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "semi": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prop-types": 0,
+    "arrow-body-style": ["error", "always"],
+    "no-unused-expressions": 0
+  },
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  }
+}

@@ -10,7 +10,7 @@ function getTodayDate() {
   return [
     date.getFullYear(),
     formatDate(date.getMonth() + 1),
-    formatDate(date.getDate())
+    formatDate(date.getDate()),
   ].join("-");
 }
 
