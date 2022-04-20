@@ -1,0 +1,28 @@
+@import "../../styles/vars.scss";
+@import "../../styles/font-mixins.scss";
+
+.wrapper{
+   flex-basis: 50%;
+   display: flex;
+   max-width: 45%;
+   margin: 10px 0;
+}
+.label {
+  @include main-text;
+  white-space: nowrap;
+  font-weight: 500;
+}
+.input {
+   @include main-text;
+   box-sizing: content-box;
+   margin-left: 10px;
+   outline: none;
+   border: none;
+   border-bottom: 2px solid $main-color;
+   float: right;
+   width: 100%;
+   font-style: italic;
+}
+.inputError{
+   border-color: $danger-color;
+}

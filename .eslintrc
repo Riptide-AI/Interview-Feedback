@@ -11,7 +11,10 @@
    ],
    "rules": {
      "semi": 0,
-     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+     "react/prop-types" : 0,
+     "arrow-body-style": ["error", "always"],
+     "no-unused-expressions": 0
    },
    "env": {
       "browser": true,

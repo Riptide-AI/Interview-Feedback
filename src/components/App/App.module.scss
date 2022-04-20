@@ -26,4 +26,6 @@
 }
 .contentTitle {
   @include article-title;
+  color: $main-color;
+  margin-bottom: 20px;
 }
