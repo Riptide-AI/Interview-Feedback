@@ -18,6 +18,7 @@ function App() {
           <div className={appStyles.content}>
             <h2 className={appStyles.contentTitle}>Interview Feedback</h2>
             <InfoList list={infoInputsObj} />
+            
           </div>
           <div className={appStyles.content}> </div>
         </div>

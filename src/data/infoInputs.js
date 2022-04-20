@@ -24,7 +24,7 @@ const infoInputsObj = {
       label: "Candidate name",
       type: "date",
       id: 4,
-      value: getTodayDate(),
+      defaultValue: getTodayDate(),
       fieldName: "date",
    },
   ],

@@ -8,9 +8,6 @@ function InfoInput({ input }) {
   const [inputError, setInputError] = useState(false);
 
   useEffect(() => {
-    if (input.value) {
-      setInputValue(input.value);
-    }
     inputValue.trim() === "" && isTouched
       ? setInputError(true)
       : setInputError(false);
@@ -34,7 +31,7 @@ function InfoInput({ input }) {
         className={inputField}
         type={input.type}
         id={input.id}
-        defaultValue={inputValue}
+        defaultValue={input.defaultValue || inputValue}
         name={input.fieldName}
         onChange={handleChange}
         required
