@@ -4,8 +4,8 @@ import listStyles from "./CheckboxList.module.scss";
 
 function CheckboxList({ list }) {
   return (
-    <div className={listStyles.checkList}>
-      <h3 className={listStyles.subtitle}>
+    <div className={listStyles.section}>
+      <h3 className={listStyles.title}>
         Candidate is a good fit for this position
       </h3>
       <ul className={listStyles.list}>

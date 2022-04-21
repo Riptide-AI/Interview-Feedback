@@ -2,8 +2,7 @@
 @import "../../styles/reset.scss";
 @import "../../styles/font-mixins.scss";
 .app {
-  max-width: 1440px;
-  width: 100%;
+  width: 1440px;
   box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
   padding: 50px 30px;
 }
@@ -16,17 +15,18 @@
 
 .contentWrapper {
   display: flex;
+  width: 100%;
+}
+.form{
+   width: 100%;
 }
 .content {
   width: 50%;
   padding: 20px 30px;
-  height: 300px;
   &:first-child {
     border-right: 2px solid $inactive-color;
   }
 }
 .contentTitle {
   @include article-title;
-  color: $main-color;
-  margin-bottom: 20px;
 }

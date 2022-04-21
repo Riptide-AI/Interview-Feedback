@@ -4,7 +4,7 @@ import listStyles from "./InfoList.module.scss";
 
 function InfoList({ list }) {
   return (
-    <div className={listStyles.list}>
+    <div className={listStyles.section}>
       {list.inputs.map((item) => {
         return <InfoInput input={item} key={item.id} />;
       })}

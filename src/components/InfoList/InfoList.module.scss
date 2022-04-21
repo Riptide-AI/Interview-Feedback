@@ -1,7 +1,10 @@
-.list {
+@import "../../styles/font-mixins.scss";
+.section {
+  @include section;
   padding-left: 10px;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  margin-top: 20px;
   justify-content: space-between;
 }

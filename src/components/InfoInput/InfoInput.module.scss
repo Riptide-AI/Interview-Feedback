@@ -1,6 +1,6 @@
 @import "../../styles/vars.scss";
 @import "../../styles/font-mixins.scss";
-
+@import "../../styles/samples.scss";
 .wrapper {
   flex-basis: 50%;
   display: flex;
@@ -14,26 +14,9 @@
   font-weight: 500;
 }
 .input {
-  @include main-text;
-  box-sizing: content-box;
-  height: 20px;
+  @extend %input-field;
   margin-left: 10px;
-  outline: none;
-  border: none;
-  border-bottom: 2px solid $secondary-color;
-  float: right;
-  width: 100%;
-  font-style: italic;
-  &:focus {
-    border-color: $main-color;
-    background-color: $main-light-color;
-  }
 }
 .inputError {
-  border-color: $danger-color;
-  background-color: rgba($color: $danger-color, $alpha: 0.2);
-  &:focus {
-    border-color: $danger-color;
-    background-color: rgba($color: $danger-color, $alpha: 0.2);
-  }
+  @extend %input-error;
 }
