@@ -1,0 +1,17 @@
+@import "../../styles/vars.scss";
+@import "../../styles/font-mixins.scss";
+.checkList {
+  padding-top: 30px;
+}
+.subtitle {
+  @include article-title;
+  font-size: 1.2rem;
+  color: $main-color;
+  margin-bottom: 15px;
+}
+.list {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}

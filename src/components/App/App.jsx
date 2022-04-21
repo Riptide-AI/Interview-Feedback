@@ -3,6 +3,8 @@ import appStyles from "./App.module.scss";
 import logo from "../../img/large-logo.svg";
 import InfoList from "../InfoList/InfoList";
 import infoInputsObj from "../../data/infoInputs";
+import CheckboxList from "../CheckboxList/CheckboxList";
+import checkListObj from "../../data/checkListObj";
 
 function App() {
   const handleSubmit = (e) => {
@@ -18,6 +20,7 @@ function App() {
           <div className={appStyles.content}>
             <h2 className={appStyles.contentTitle}>Interview Feedback</h2>
             <InfoList list={infoInputsObj} />
+            <CheckboxList list={checkListObj} />
           </div>
           <div className={appStyles.content}> </div>
         </div>

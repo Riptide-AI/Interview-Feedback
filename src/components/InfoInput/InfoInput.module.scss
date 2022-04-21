@@ -6,6 +6,7 @@
   display: flex;
   max-width: 45%;
   margin: 10px 0;
+  align-items: center;
 }
 .label {
   @include main-text;
@@ -15,14 +16,24 @@
 .input {
   @include main-text;
   box-sizing: content-box;
+  height: 20px;
   margin-left: 10px;
   outline: none;
   border: none;
-  border-bottom: 2px solid $main-color;
+  border-bottom: 2px solid $secondary-color;
   float: right;
   width: 100%;
   font-style: italic;
+  &:focus {
+    border-color: $main-color;
+    background-color: $main-light-color;
+  }
 }
 .inputError {
   border-color: $danger-color;
+  background-color: rgba($color: $danger-color, $alpha: 0.2);
+  &:focus {
+    border-color: $danger-color;
+    background-color: rgba($color: $danger-color, $alpha: 0.2);
+  }
 }

@@ -1,5 +1,9 @@
 @import "./styles/vars.scss";
 @import "./styles/reset.scss";
+
+html{
+   font-size: $global-font-size;
+}
 body {
   background-color: $main-bg-color;
   display: flex;
