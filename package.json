@@ -23,7 +23,8 @@
     "eject": "react-scripts eject",
     "prepare": "husky install",
     "lint:js": "eslint ./**/*.{js,jsx}  --color",
-    "prettier": "prettier ./**/*.{js,jsx} --write"
+    "prettier": "prettier ./**/*.{js,jsx} --write",
+    "lint:style": "stylelint ./**/*.scss --fix --color"
   },
   "eslintConfig": {
     "extends": [
@@ -57,7 +58,9 @@
   "lint-staged": {
     "./**/*.{js,jsx}": [
       "npm run lint:js",
-      "npm run prettier"
+      "npm run prettier",
+      "npm run lint:style"
+
     ]
   }
 }
