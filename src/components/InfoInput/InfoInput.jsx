@@ -14,7 +14,7 @@ function InfoInput({ input }) {
   }, [inputValue]);
 
   const inputField = cn(inputStyles.input, {
-    [inputStyles.inputError]: inputError,
+    [inputStyles["input-error"]]: inputError,
   });
 
   const handleChange = (e) => {

@@ -1,6 +1,8 @@
 @import "../../styles/font-mixins.scss";
+
 .section {
   @include section;
+
   padding-left: 10px;
   display: flex;
   flex-wrap: wrap;

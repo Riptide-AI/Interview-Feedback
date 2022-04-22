@@ -8,28 +8,35 @@
   align-items: center;
   height: 30px;
 }
+
 .input {
   @extend %input-field;
+
   height: 30px;
   flex-basis: 50%;
   padding-left: 10px;
   flex-grow: 1;
 }
-.inputError.inputError {
+
+.input-error {
   @extend %input-error;
 }
-.openBtn {
+
+.open-btn {
   @extend %action-btn;
+
   flex-basis: 30px;
   margin-right: 10px;
   transform-origin: center;
   transform: rotate(45deg);
 }
-.openedBtn {
+
+.opened-btn {
   background-color: white;
   color: $action-color;
   transition: $hover-time-btn color, $hover-time-btn background-color;
   transform: rotate(90deg);
+
   &:hover {
     color: white;
     background-color: $action-color;

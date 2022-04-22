@@ -16,13 +16,13 @@ function App() {
   const handlePrint = useReactToPrint({ content: () => printRef.current });
   return (
     <div ref={printRef} className={appStyles.app}>
-      <div className={appStyles.logoWrapper}>
+      <div className={appStyles["logo-wrapper"]}>
         <img src={logo} className={appStyles.logo} alt="FiveSysDev logo" />
       </div>
       <form action="#" className={appStyles.form}>
-        <div className={appStyles.contentWrapper}>
+        <div className={appStyles["content-wrapper"]}>
           <div className={appStyles.content}>
-            <h2 className={appStyles.contentTitle}>Interview Feedback</h2>
+            <h2 className={appStyles["content-title"]}>Interview Feedback</h2>
             <InfoList list={infoInputsObj} />
             <CheckboxList list={checkListObj} />
             <SkillsList />

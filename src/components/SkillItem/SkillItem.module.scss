@@ -12,9 +12,7 @@
   justify-content: flex-end;
   position: relative;
   flex-grow: 0;
-  &:hover::before{
-     animation: pulse 2s infinite;
-  }
+
   &::before {
     content: "";
     width: 10px;
@@ -25,20 +23,29 @@
     left: -28px;
     border: 2px solid $main-color;
   }
+
+  &:hover::before {
+    animation: pulse 2s infinite;
+  }
 }
+
 .name {
   @include main-text;
+
   flex-grow: 1;
 }
+
 .rating {
   flex-basis: 120px;
 }
-.btnWrap {
+
+.btn-wrap {
   flex-basis: 24px;
   padding-left: 10px;
   border-left: 1px solid $inactive-color;
   margin-left: 10px;
 }
-.closeBtn {
+
+.close-btn {
   @extend %tab-close-btn;
 }

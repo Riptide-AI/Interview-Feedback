@@ -20,10 +20,10 @@ function SkillItem({ skill, removeSkill }) {
           }}
         />
       </div>
-      <div className={skillStyles.btnWrap}>
+      <div className={skillStyles["btn-wrap"]}>
         <button
           type="button"
-          className={skillStyles.closeBtn}
+          className={skillStyles["close-btn"]}
           onClick={handleDelete}
         >
           &#10005;

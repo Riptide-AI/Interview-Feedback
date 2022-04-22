@@ -31,7 +31,7 @@ function SkillsInput({ addSkill }) {
     }
   };
   const inputField = cn(inputStyles.input, {
-    [inputStyles.inputError]: inputError,
+    [inputStyles["input-error"]]: inputError,
   });
   return (
     <div className={inputStyles.wrapper}>
@@ -40,8 +40,8 @@ function SkillsInput({ addSkill }) {
         onClick={openTab}
         className={
           !isOpen
-            ? inputStyles.openBtn
-            : cn(inputStyles.openBtn, inputStyles.openedBtn)
+            ? inputStyles["open-btn"]
+            : cn(inputStyles["open-btn"], inputStyles["opened-btn"])
         }
       >
         &#10005;

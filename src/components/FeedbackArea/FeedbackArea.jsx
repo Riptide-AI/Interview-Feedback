@@ -14,7 +14,7 @@ function FeedbackArea({ area }) {
   }, [inputValue]);
 
   const inputField = cn(inputStyles.textarea, {
-    [inputStyles.inputError]: inputError,
+    [inputStyles["input-error"]]: inputError,
   });
 
   const handleChange = (e) => {

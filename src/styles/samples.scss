@@ -2,12 +2,14 @@
 
 %input-field {
   @include main-text;
+
   height: 20px;
   outline: none;
   border: none;
   border-bottom: 2px solid $secondary-color;
   width: 100%;
   font-style: italic;
+
   &:focus {
     border-color: $main-color;
     background-color: $main-light-color;
@@ -15,10 +17,11 @@
 }
 %input-error {
   border-color: $danger-color;
-  background-color: rgba($color: $danger-color, $alpha: 0.2);
+  background-color: rgba($color: $danger-color, $alpha: 20%);
+
   &:focus {
     border-color: $danger-color;
-    background-color: rgba($color: $danger-color, $alpha: 0.2);
+    background-color: rgba($color: $danger-color, $alpha: 20%);
   }
 }
 
@@ -50,7 +53,6 @@
   border-radius: 50%;
   outline: none;
   cursor: pointer;
-
   transition: $hover-time-btn background-color, $hover-time-btn color;
   user-select: none;
 

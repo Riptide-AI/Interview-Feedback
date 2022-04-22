@@ -42,7 +42,7 @@
       "rules",
       "at-rules",
       "less-mixins"
-    ],
+    ],    
     "at-rule-empty-line-before": [
       "always",
       {
