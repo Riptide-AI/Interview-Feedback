@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 import cn from "classnames";
-import inputStyles from "./InfoInput.module.scss";
+import inputStyles from "./FeedbackArea.module.scss";
 
-function InfoInput({ input }) {
+function FeedbackArea({ area }) {
   const [inputValue, setInputValue] = useState("");
   const [isTouched, setTouched] = useState(false);
   const [inputError, setInputError] = useState(false);
 
   useEffect(() => {
-    inputValue.trim() === "" && isTouched
+    inputValue.trim() === "" && isTouched && area.required
       ? setInputError(true)
       : setInputError(false);
   }, [inputValue]);
 
-  const inputField = cn(inputStyles.input, {
+  const inputField = cn(inputStyles.textarea, {
     [inputStyles.inputError]: inputError,
   });
 
@@ -24,15 +24,14 @@ function InfoInput({ input }) {
 
   return (
     <div className={inputStyles.wrapper}>
-      <label className={inputStyles.label} htmlFor={input.id}>
-        {input.label}
+      <label className={inputStyles.label} htmlFor={area.id}>
+        {area.label}
       </label>
-      <input
+      <textarea
         className={inputField}
-        name={input.name}
-        type={input.type}
-        id={input.id}
-        defaultValue={input.defaultValue || inputValue}
+        id={area.id}
+        value={inputValue}
+        name={area.name}
         onChange={handleChange}
         required
       />
@@ -40,4 +39,4 @@ function InfoInput({ input }) {
   );
 }
 
-export default InfoInput;
+export default FeedbackArea;

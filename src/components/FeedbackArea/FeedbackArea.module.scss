@@ -1,0 +1,33 @@
+@import "../../styles/vars.scss";
+@import "../../styles/font-mixins.scss";
+@import "../../styles/samples.scss";
+.wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.label {
+  @include section-title;
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 1.2rem;
+  border-bottom: 1px solid $main-color;
+}
+.textarea {
+  border: 1px solid $secondary-color;
+  width: 100%;
+  min-height: 100px;
+  outline: none;
+  resize: vertical;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  &:focus {
+    border-color: $main-color;
+    background-color: $main-light-color;
+  }
+}
+.inputError {
+  @extend %input-error;
+}
