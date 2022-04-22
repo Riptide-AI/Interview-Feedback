@@ -1,6 +1,7 @@
 @import "../../styles/vars.scss";
 @import "../../styles/font-mixins.scss";
 @import "../../styles/samples.scss";
+@import "../../styles/animations.scss";
 
 .wrapper {
   display: flex;
@@ -11,6 +12,9 @@
   justify-content: flex-end;
   position: relative;
   flex-grow: 0;
+  &:hover::before{
+     animation: pulse 2s infinite;
+  }
   &::before {
     content: "";
     width: 10px;

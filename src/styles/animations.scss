@@ -1,0 +1,11 @@
+@import "./vars.scss";
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 $main-color;
+  }
+
+  100% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+}
