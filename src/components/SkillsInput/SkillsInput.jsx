@@ -35,17 +35,6 @@ function SkillsInput({ addSkill }) {
   });
   return (
     <div className={inputStyles.wrapper}>
-      {isOpen ? (
-        <input
-          type="text"
-          name="skill"
-          className={inputField}
-          value={inputValue}
-          onChange={handleChange}
-          onKeyDown={addItem}
-          maxLength="50"
-        />
-      ) : null}
       <button
         type="button"
         onClick={openTab}
@@ -57,6 +46,18 @@ function SkillsInput({ addSkill }) {
       >
         &#10005;
       </button>
+      {isOpen ? (
+        <input
+          type="text"
+          name="skill"
+          className={inputField}
+          value={inputValue}
+          onChange={handleChange}
+          onKeyDown={addItem}
+          maxLength="40"
+          autoFocus={isOpen}
+        />
+      ) : null}
     </div>
   );
 }

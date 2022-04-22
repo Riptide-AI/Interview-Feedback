@@ -8,9 +8,11 @@
 }
 .list {
   list-style: none;
-  padding: 0 50px;
+  border-left: 2px solid $main-color;
+  padding: 0 20px;
+  margin: 20px 20px 20px 15px;
 }
 .wrapper {
-  border-left: 2px solid $main-color;
-  padding: 0 15px;
+  padding: 0 10px;
+  margin: 10px;
 }

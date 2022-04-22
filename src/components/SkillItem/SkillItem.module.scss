@@ -1,3 +1,40 @@
-.wrapper{
-   display: flex;
+@import "../../styles/vars.scss";
+@import "../../styles/font-mixins.scss";
+@import "../../styles/samples.scss";
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid $inactive-color;
+  align-items: center;
+  padding: 15px 10px;
+  justify-content: flex-end;
+  position: relative;
+  flex-grow: 0;
+  &::before {
+    content: "";
+    width: 10px;
+    position: absolute;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    left: -28px;
+    border: 2px solid $main-color;
+  }
+}
+.name {
+  @include main-text;
+  flex-grow: 1;
+}
+.rating {
+  flex-basis: 120px;
+}
+.btnWrap {
+  flex-basis: 24px;
+  padding-left: 10px;
+  border-left: 1px solid $inactive-color;
+  margin-left: 10px;
+}
+.closeBtn {
+  @extend %tab-close-btn;
 }

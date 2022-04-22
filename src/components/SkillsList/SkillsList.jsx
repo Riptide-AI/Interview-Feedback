@@ -7,7 +7,7 @@ function SkillsList() {
   const [list, setList] = useState([]);
 
   function addSkill(skill) {
-    setList((prev) => [...prev, skill]);
+    setList((prev) => [skill, ...prev]);
   }
   function removeSkill(id) {
     setList(

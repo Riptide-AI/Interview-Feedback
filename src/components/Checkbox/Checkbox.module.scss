@@ -8,7 +8,6 @@
 }
 
 .label {
-  font-style: italic;
   @include main-text;
   cursor: pointer;
   position: relative;
@@ -19,15 +18,18 @@
   display: none;
   margin-right: 5px;
   &:checked + .label::before {
-    border-color: $main-color;
-    box-shadow: 0 0 5px $main-color;
+    box-shadow: 0 0 10px $main-color;
+    background-color: $main-color;
   }
   + .label::before {
     content: "";
-    height: 100%;
-    width: 0;
-    border-left: 2px solid $secondary-color;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: $inactive-color;
     position: absolute;
-    left: 0;
+    left: -10px;
+    top: 50%;
+    transform:translateY(-50%);
   }
 }

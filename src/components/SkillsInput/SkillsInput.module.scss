@@ -3,42 +3,26 @@
 @import "../../styles/samples.scss";
 
 .wrapper {
-  width: 50%;
-  padding-left: 50px;
-  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 .input {
   @extend %input-field;
   height: 20px;
+  width: 50%;
+  padding-left: 10px;
 }
 .inputError.inputError {
   @extend %input-error;
 }
 .openBtn {
-  line-height: 36px;
-  text-align: center;
-  top: -9px;
-  left: 0;
-  width: 36px;
-  height: 36px;
-  position: absolute;
-  background-color: white;
-  border: 1px solid $action-color;
-  color: $action-color;
-  font-size: 1rem;
-  border-radius: 50%;
-  outline: none;
-  cursor: pointer;
-  transform-origin: center;
+  @extend %action-btn;
+  margin-right: 10px;
   transform: rotate(45deg);
-  transition: 0.3s background-color, 0.3s color;
-
-  &:hover {
-    color: white;
-    background-color: $action-color;
-    transition: 0.3s background-color, 0.3s color;
-  }
 }
 .openedBtn {
+  color: white;
+  background-color: $action-color;
   transform: rotate(90deg);
 }
