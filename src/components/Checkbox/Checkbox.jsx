@@ -9,6 +9,7 @@ function Checkbox({ checkboxData }) {
         type={checkboxData.type}
         id={checkboxData.id}
         name={checkboxData.name}
+        value={checkboxData.value}
         required
       />
       <label className={listStyles.label} htmlFor={checkboxData.id}>

@@ -11,17 +11,19 @@
 
 .label {
   @include section-title;
-
   white-space: nowrap;
   font-weight: 400;
   font-size: 1.2rem;
   border-bottom: 1px solid $main-color;
+  @media #{$screen-sm-wide} {
+    white-space: normal;
+  }
 }
 
 .textarea {
   border: 1px solid $secondary-color;
   width: 100%;
-  min-height: 100px;
+  min-height: 80px;
   outline: none;
   resize: vertical;
   padding: 5px 10px;

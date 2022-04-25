@@ -6,6 +6,20 @@ $main-light-color: #f5f8fe;
 $success-color: #8bc34a;
 $danger-color: #e53935;
 $main-bg-color: #fff;
+
 $main-font: "Roboto", sans-serif;
+
 $global-font-size: 16px;
-$hover-time-btn: 0.1s;
+$global-font-size-small: 14px;
+$hover-time-btn: 0.2s;
+
+$xl: 1500px;
+$screen-xl-wide: "only screen and (max-width: #{$xl})";
+$lg: 1300px;
+$screen-lg-wide: "only screen and (max-width: #{$lg})";
+$md: 850px;
+$screen-md-wide: "only screen and (max-width: #{$md})";
+$sm: 600px;
+$screen-sm-wide: "only screen and (max-width: #{$sm})";
+$xs: 450px;
+$screen-xs-wide: "only screen and (max-width: #{$xs})";

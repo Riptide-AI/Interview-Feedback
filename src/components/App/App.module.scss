@@ -6,6 +6,21 @@
   width: 1440px;
   box-shadow: 0 0 20px rgba($color: #000, $alpha: 20%);
   padding: 50px 30px;
+
+  @media #{$screen-xl-wide} {
+    width: 100%;
+  }
+
+  @media #{$screen-lg-wide} {
+    width: 800px;
+  }
+
+  @media #{$screen-md-wide} {
+    width: 100%;
+  }
+  @media #{$screen-sm-wide} {
+    padding: 50px 0;
+  }
 }
 
 .logo-wrapper {
@@ -19,6 +34,13 @@
 .content-wrapper {
   display: flex;
   width: 100%;
+
+  @media #{$screen-lg-wide} {
+    flex-direction: column;
+  }
+  @media print {
+    flex-direction: column;
+  }
 }
 
 .form {
@@ -29,8 +51,28 @@
   width: 50%;
   padding: 20px 30px 0;
 
+  @media print {
+    width: 100%;
+  }
+  @media #{$screen-lg-wide} {
+    width: 100%;
+  }
+  @media #{$screen-xs-wide} {
+    padding: 20px 20px 0;
+  }
   &:first-child {
     border-right: 2px solid $inactive-color;
+
+    @media #{$screen-lg-wide} {
+      border: 0;
+      border-bottom: 2px solid $inactive-color;
+      padding-bottom: 20px;
+    }
+    @media print {
+      border: 0;
+      border-bottom: 2px solid $inactive-color;
+      padding-bottom: 20px;
+    }
   }
 }
 

@@ -3,6 +3,9 @@
 
 html {
   font-size: $global-font-size;
+  @media #{$screen-xs-wide} {
+   font-size: $global-font-size-small;
+}
 }
 
 body {

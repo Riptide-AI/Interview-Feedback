@@ -19,15 +19,15 @@ function SkillItem({ skill, removeSkill }) {
             setRating(newValue);
           }}
         />
-      </div>
-      <div className={skillStyles["btn-wrap"]}>
-        <button
-          type="button"
-          className={skillStyles["close-btn"]}
-          onClick={handleDelete}
-        >
-          &#10005;
-        </button>
+        <div className={skillStyles["btn-wrap"]}>
+          <button
+            type="button"
+            className={skillStyles["close-btn"]}
+            onClick={handleDelete}
+          >
+            &#10005;
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -14,4 +14,8 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+   padding: 0 10px;
+  @media #{$screen-md-wide} {
+    flex-direction: column;
+  }
 }

@@ -5,6 +5,9 @@
   display: flex;
   align-items: center;
   padding-left: 10px;
+  @media #{$screen-md-wide} {
+    margin-bottom: 15px;
+  }
 }
 
 .label {

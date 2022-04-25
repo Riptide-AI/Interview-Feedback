@@ -9,9 +9,11 @@
   border-bottom: 1px solid $inactive-color;
   align-items: center;
   padding: 15px 10px;
-  justify-content: flex-end;
   position: relative;
   flex-grow: 0;
+  @media #{$screen-xs-wide} {
+    flex-direction: column;
+  }
 
   &::before {
     content: "";
@@ -31,16 +33,19 @@
 
 .name {
   @include main-text;
-
   flex-grow: 1;
+  overflow-wrap: anywhere;
+  padding: 0 10px;
 }
 
 .rating {
-  flex-basis: 120px;
+  display: flex;
+  @media #{$screen-xs-wide} {
+    padding-top: 10px;
+  }
 }
 
 .btn-wrap {
-  flex-basis: 24px;
   padding-left: 10px;
   border-left: 1px solid $inactive-color;
   margin-left: 10px;

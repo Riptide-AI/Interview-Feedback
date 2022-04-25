@@ -38,14 +38,14 @@ function SkillsInput({ addSkill }) {
       <button
         type="button"
         onClick={openTab}
+        aria-label="Close"
         className={
           !isOpen
             ? inputStyles["open-btn"]
             : cn(inputStyles["open-btn"], inputStyles["opened-btn"])
         }
-      >
-        &#10005;
-      </button>
+      />
+
       {isOpen ? (
         <input
           type="text"
@@ -54,7 +54,6 @@ function SkillsInput({ addSkill }) {
           value={inputValue}
           onChange={handleChange}
           onKeyDown={addItem}
-          maxLength="40"
           autoFocus={isOpen}
         />
       ) : null}
