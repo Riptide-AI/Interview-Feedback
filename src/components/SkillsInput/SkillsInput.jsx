@@ -52,6 +52,7 @@ function SkillsInput({ addSkill }) {
           name="skill"
           className={inputField}
           value={inputValue}
+          form=""
           onChange={handleChange}
           onKeyDown={addItem}
           autoFocus={isOpen}

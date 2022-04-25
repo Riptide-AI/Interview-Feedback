@@ -3,7 +3,9 @@ import cn from "classnames";
 import inputStyles from "./FeedbackArea.module.scss";
 
 function FeedbackArea({ area }) {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState(
+    localStorage.getItem(area.name) || ""
+  );
   const [isTouched, setTouched] = useState(false);
   const [inputError, setInputError] = useState(false);
 
@@ -21,6 +23,9 @@ function FeedbackArea({ area }) {
     setInputValue(e.target.value);
     setTouched(true);
   };
+  const handleBlur = () => {
+    localStorage.setItem(area.name, inputValue);
+  };
 
   return (
     <div className={inputStyles.wrapper}>
@@ -33,7 +38,8 @@ function FeedbackArea({ area }) {
         value={inputValue}
         name={area.name}
         onChange={handleChange}
-        required
+        onBlur={handleBlur}
+        required={area.required}
       />
     </div>
   );

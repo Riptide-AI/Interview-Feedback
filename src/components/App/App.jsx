@@ -14,12 +14,18 @@ import Button from "../Button/Button";
 function App() {
   const printRef = useRef();
   const handlePrint = useReactToPrint({ content: () => printRef.current });
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    handlePrint();
+  }
+
   return (
     <div ref={printRef} className={appStyles.app}>
       <div className={appStyles["logo-wrapper"]}>
         <img src={logo} className={appStyles.logo} alt="FiveSysDev logo" />
       </div>
-      <form action="#" className={appStyles.form}>
+      <form action="#" className={appStyles.form} onSubmit={handleSubmit}>
         <div className={appStyles["content-wrapper"]}>
           <div className={appStyles.content}>
             <h2 className={appStyles["content-title"]}>Interview Feedback</h2>
@@ -29,7 +35,7 @@ function App() {
           </div>
           <div className={appStyles.content}>
             <FeedbackList list={feedbackAreaObj} />
-            <Button value="Save as PDF" type="button" action={handlePrint} />
+            <Button value="Save as PDF" type="submit" />
           </div>
         </div>
       </form>

@@ -3,7 +3,9 @@ import cn from "classnames";
 import inputStyles from "./InfoInput.module.scss";
 
 function InfoInput({ input }) {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState(
+    localStorage.getItem(input.name) || ""
+  );
   const [isTouched, setTouched] = useState(false);
   const [inputError, setInputError] = useState(false);
 
@@ -16,7 +18,9 @@ function InfoInput({ input }) {
   const inputField = cn(inputStyles.input, {
     [inputStyles["input-error"]]: inputError,
   });
-
+  const handleBlur = () => {
+    localStorage.setItem(input.name, inputValue);
+  };
   const handleChange = (e) => {
     setInputValue(e.target.value);
     setTouched(true);
@@ -34,6 +38,7 @@ function InfoInput({ input }) {
         id={input.id}
         defaultValue={input.defaultValue || inputValue}
         onChange={handleChange}
+        onBlur={handleBlur}
         required
       />
     </div>

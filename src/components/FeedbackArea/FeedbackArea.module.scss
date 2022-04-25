@@ -21,11 +21,11 @@
 }
 
 .textarea {
+  @include main-text;
   border: 1px solid $secondary-color;
   width: 100%;
-  min-height: 80px;
   outline: none;
-  resize: vertical;
+  min-height: 100px;
   padding: 5px 10px;
   font-size: 1.2rem;
   line-height: 1.5rem;

@@ -4,7 +4,6 @@
 .wrapper {
   display: flex;
   align-items: center;
-  padding-left: 10px;
   @media #{$screen-md-wide} {
     margin-bottom: 15px;
   }
@@ -15,13 +14,13 @@
 
   cursor: pointer;
   position: relative;
-  padding: 0 5px;
 }
 
 .radio {
-  display: none;
+  width: 10px;
+  height: 10px;
+  opacity: 0;
   margin-right: 5px;
-
   + .label::before {
     content: "";
     height: 10px;
@@ -29,7 +28,7 @@
     border-radius: 50%;
     background-color: $inactive-color;
     position: absolute;
-    left: -10px;
+    left: -15px;
     top: 50%;
     transform: translateY(-50%);
   }

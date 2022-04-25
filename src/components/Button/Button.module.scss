@@ -13,6 +13,9 @@
   border: 1px solid $action-color;
   transition: $hover-time-btn color, $hover-time-btn background-color;
   cursor: pointer;
+  @media print {
+    display: none;
+  }
 
   &:hover {
     background-color: white;
