@@ -3,7 +3,7 @@ import { useReactToPrint } from "react-to-print";
 import appStyles from "./App.module.scss";
 import logo from "../../img/large-logo.svg";
 import InfoList from "../InfoList/InfoList";
-import infoInputsObj from "../../data/infoInputs";
+import infoInputsObj from "../../data/infoInputsObj";
 import CheckboxList from "../CheckboxList/CheckboxList";
 import checkListObj from "../../data/checkListObj";
 import SkillsList from "../SkillsList/SkillsList";
