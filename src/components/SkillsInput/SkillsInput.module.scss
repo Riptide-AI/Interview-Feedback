@@ -36,17 +36,15 @@
 
   &::before {
     content: "\2715";
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transform: rotate(45deg);
     transition: $hover-time-btn color, $hover-time-btn transform;
     color: $action-color;
-    position: absolute;
-    line-height: 30px;
     font-size: 16px;
     text-align: center;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
+    line-height: 16px;
   }
   &:hover::before {
     color: white;

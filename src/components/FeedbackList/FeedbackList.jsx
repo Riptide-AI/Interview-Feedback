@@ -2,12 +2,12 @@ import React from "react";
 import FeedbackArea from "../FeedbackArea/FeedbackArea";
 import listStyles from "./FeedbackList.module.scss";
 
-function FeedbackList({ list }) {
+function FeedbackList({ list, isFormReset }) {
   return (
     <div className={listStyles.section}>
-      {list.areas.map((item) => {
-        return <FeedbackArea area={item} key={item.id} />;
-      })}
+      {list.areas.map((item) => (
+        <FeedbackArea area={item} key={item.id} isFormReset={isFormReset} />
+      ))}
     </div>
   );
 }

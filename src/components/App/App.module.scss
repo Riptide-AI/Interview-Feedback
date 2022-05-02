@@ -1,40 +1,60 @@
 @import "../../styles/vars.scss";
 @import "../../styles/reset.scss";
 @import "../../styles/font-mixins.scss";
+@import "https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0";
 
 .app {
-  width: 1440px;
+  max-width: 1440px;
+  width: 100%;
   box-shadow: 0 0 20px rgba($color: #000, $alpha: 20%);
   padding: 50px 30px;
-
-  @media #{$screen-xl-wide} {
-    width: 100%;
-  }
+  min-width: 320px;
 
   @media #{$screen-lg-wide} {
-    width: 800px;
+    max-width: 800px;
+  }
+  @media #{$screen-md-wide} {
+    width: 600px;
   }
 
-  @media #{$screen-md-wide} {
-    width: 100%;
-  }
   @media #{$screen-sm-wide} {
+    width: 100vw;
+    box-shadow: none;
+  }
+  @media #{$screen-xs-wide} {
     padding: 50px 0;
   }
+  @media #{$screen-min-wide} {
+    width: auto;
+  }
   @media print {
-     padding: 0;
-     box-shadow: none;
+    box-shadow: none;
+    padding: 0;
   }
 }
 
-.logo-wrapper {
-  padding: 0 0 0 30px;
-}
+.header {
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 
+  @media #{$screen-xs-wide} {
+    padding: 0 10px;
+  }
+}
+.position-select {
+  text-transform: capitalize;
+  @media print {
+    display: none;
+  }
+}
 .logo {
   height: 50px;
 }
-
+.pos-item {
+  text-transform: capitalize;
+}
 .content-wrapper {
   display: flex;
   width: 100%;
@@ -56,13 +76,13 @@
   padding: 20px 30px 0;
 
   @media print {
-    width: 100%;
+    width: 800px;
   }
   @media #{$screen-lg-wide} {
     width: 100%;
   }
   @media #{$screen-xs-wide} {
-    padding: 20px 20px 0;
+    padding: 20px 10px 0;
   }
   &:first-child {
     border-right: 2px solid $inactive-color;
@@ -74,12 +94,28 @@
     }
     @media print {
       border: 0;
-      border-bottom: 2px solid $inactive-color;
-      padding-bottom: 20px;
     }
   }
 }
 
 .content-title {
   @include article-title;
+}
+.button-container {
+  display: flex;
+  @media print {
+   display: none;
+ }
+}
+input[type="date"] {
+  @media print {
+    -webkit-appearance: none;
+  }
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  @media print {
+    display: none;
+    -webkit-appearance: none;
+  }
 }

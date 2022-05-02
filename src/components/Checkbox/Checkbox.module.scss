@@ -7,6 +7,9 @@
   @media #{$screen-md-wide} {
     margin-bottom: 15px;
   }
+  @media print{
+     color-adjust: exact; // prop for correct pseudo element view
+  }
 }
 
 .label {

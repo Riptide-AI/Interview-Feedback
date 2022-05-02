@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import cn from "classnames";
+import React, { useRef, useState } from "react";
 import inputStyles from "./SkillsInput.module.scss";
 
 function SkillsInput({ addSkill }) {
@@ -7,12 +7,21 @@ function SkillsInput({ addSkill }) {
   const [inputValue, setInputValue] = useState("");
   const [inputError, setInputError] = useState(false);
 
+  const skillBtnRef = useRef();
+
   const handleChange = (e) => {
     setInputValue(e.target.value);
     setInputError(false);
   };
   const openTab = () => {
     setOpen(!isOpen);
+    setInputValue("");
+  };
+  const handleBlur = (e) => {
+    if (e.relatedTarget !== skillBtnRef.current) {
+      setInputError(false);
+      setOpen(false);
+    }
   };
   const addItem = (e) => {
     if (e.key !== "Enter") {
@@ -23,6 +32,7 @@ function SkillsInput({ addSkill }) {
         name: inputValue,
         rating: 0,
         id: new Date().getTime(),
+        topics: [],
       };
       addSkill(skillItem);
       setInputValue("");
@@ -37,6 +47,7 @@ function SkillsInput({ addSkill }) {
     <div className={inputStyles.wrapper}>
       <button
         type="button"
+        ref={skillBtnRef}
         onClick={openTab}
         aria-label="Close"
         className={
@@ -52,10 +63,12 @@ function SkillsInput({ addSkill }) {
           name="skill"
           className={inputField}
           value={inputValue}
+          onBlur={handleBlur}
           form=""
           onChange={handleChange}
           onKeyDown={addItem}
-          autoFocus={isOpen}
+          placeholder="Type skill name"
+          autoFocus
         />
       ) : null}
     </div>

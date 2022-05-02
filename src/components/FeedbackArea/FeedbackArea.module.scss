@@ -3,14 +3,21 @@
 @import "../../styles/samples.scss";
 
 .wrapper {
-  display: flex;
   width: 100%;
-  flex-direction: column;
-  margin-bottom: 20px;
+  padding: 10px 0;
+  display: inline-block;
+  @media print {
+    break-inside: avoid;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .label {
   @include section-title;
+  display: block;
+  margin: 0;
   white-space: nowrap;
   font-weight: 400;
   font-size: 1.2rem;
@@ -22,17 +29,32 @@
 
 .textarea {
   @include main-text;
-  border: 1px solid $secondary-color;
+  display: block;
   width: 100%;
+  border: 1px solid $secondary-color;
   outline: none;
-  min-height: 100px;
+  max-height: 400px;
+  display: inline-block;
+  min-height: 70px;
   padding: 5px 10px;
   font-size: 1.2rem;
   line-height: 1.5rem;
+  resize: vertical;
+  margin: 10px 0;
 
   &:focus {
     border-color: $main-color;
     background-color: $main-light-color;
+  }
+  &::placeholder {
+    font-style: italic;
+  }
+
+  @media print {
+    resize: none;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 

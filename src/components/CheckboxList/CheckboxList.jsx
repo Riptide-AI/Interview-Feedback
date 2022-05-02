@@ -9,9 +9,9 @@ function CheckboxList({ list }) {
         Candidate is a good fit for this position
       </h3>
       <ul className={listStyles.list}>
-        {list.checks.map((item) => {
-          return <Checkbox checkboxData={item} key={item.id} />;
-        })}
+        {list.checks.map((item) => (
+          <Checkbox checkboxData={item} key={item.id} />
+        ))}
       </ul>
     </div>
   );

@@ -2,12 +2,20 @@ import React, { useState, useEffect } from "react";
 import cn from "classnames";
 import inputStyles from "./InfoInput.module.scss";
 
-function InfoInput({ input }) {
+function InfoInput({ input, isFormReset }) {
   const [inputValue, setInputValue] = useState(
     localStorage.getItem(input.name) || ""
   );
   const [isTouched, setTouched] = useState(false);
   const [inputError, setInputError] = useState(false);
+
+  useEffect(() => {
+    if (isFormReset) {
+      setInputValue("");
+      setInputError(false);
+      setTouched(false);
+    }
+  }, [isFormReset]);
 
   useEffect(() => {
     inputValue.trim() === "" && isTouched

@@ -21,7 +21,7 @@ const infoInputsObj = {
       name: "interviewer",
     },
     {
-      label: "Candidate name",
+      label: "Interview date",
       type: "date",
       id: 4,
       defaultValue: getTodayDate(),

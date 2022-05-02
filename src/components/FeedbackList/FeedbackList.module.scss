@@ -2,11 +2,10 @@
 
 .section {
   @include section;
+  padding-bottom: 0;
 
-  padding-left: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-top: 20px;
-  justify-content: space-between;
+  @media print {
+    padding: 0;
+    margin-bottom: 0;
+  }
 }
