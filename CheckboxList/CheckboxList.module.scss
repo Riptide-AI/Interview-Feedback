@@ -1,0 +1,21 @@
+@import "../../styles/vars.scss";
+@import "../../styles/font-mixins.scss";
+
+.section {
+  @include section;
+}
+
+.title {
+  @include section-title;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+   padding: 0 10px;
+  @media #{$screen-md-wide} {
+    flex-direction: column;
+  }
+}

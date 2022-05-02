@@ -1,0 +1,63 @@
+@import "../../styles/vars.scss";
+@import "../../styles/font-mixins.scss";
+@import "../../styles/samples.scss";
+
+.wrapper {
+  width: 100%;
+  padding: 10px 0;
+  display: inline-block;
+  @media print {
+    break-inside: avoid;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.label {
+  @include section-title;
+  display: block;
+  margin: 0;
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 1.2rem;
+  border-bottom: 1px solid $main-color;
+  @media #{$screen-sm-wide} {
+    white-space: normal;
+  }
+}
+
+.textarea {
+  @include main-text;
+  display: block;
+  width: 100%;
+  border: 1px solid $secondary-color;
+  outline: none;
+  max-height: 400px;
+  display: inline-block;
+  min-height: 70px;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  resize: vertical;
+  margin: 10px 0;
+
+  &:focus {
+    border-color: $main-color;
+    background-color: $main-light-color;
+  }
+  &::placeholder {
+    font-style: italic;
+  }
+
+  @media print {
+    resize: none;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.input-error {
+  @extend %input-error;
+}
