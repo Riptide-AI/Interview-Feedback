@@ -1,0 +1,65 @@
+@import "../../styles/vars.scss";
+@import "../../styles/font-mixins.scss";
+@import "../../styles/samples.scss";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 30px;
+
+  @media print {
+    display: none;
+  }
+}
+
+.input {
+  @extend %input-field;
+
+  height: 30px;
+  flex-basis: 50%;
+  padding-left: 10px;
+  flex-grow: 1;
+}
+
+.input-error {
+  @extend %input-error;
+}
+
+.open-btn {
+  @extend %action-btn;
+  flex-basis: 30px;
+  margin-right: 10px;
+  transform-origin: center;
+  background-color: white;
+  position: relative;
+
+  &::before {
+    content: "\2715";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+    transition: $hover-time-btn color, $hover-time-btn transform;
+    color: $action-color;
+    font-size: 16px;
+    text-align: center;
+    line-height: 16px;
+  }
+  &:hover::before {
+    color: white;
+  }
+}
+
+.opened-btn {
+  transition: $hover-time-btn background-color;
+  &::before {
+    content: "\2715";
+    color: $action-color;
+    transform: rotate(180deg);
+    transition: $hover-time-btn transform;
+  }
+  &:hover {
+    background-color: $action-color;
+  }
+}

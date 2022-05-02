@@ -1,0 +1,11 @@
+@import "../../styles/font-mixins.scss";
+
+.section {
+  @include section;
+  padding-bottom: 0;
+
+  @media print {
+    padding: 0;
+    margin-bottom: 0;
+  }
+}

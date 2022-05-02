@@ -1,0 +1,26 @@
+@import "../../styles/vars.scss";
+@import "../../styles/font-mixins.scss";
+@import "../../styles/samples.scss";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  @media print {
+    display: none;
+  }
+}
+
+.input {
+  @extend %input-field;
+
+  height: 30px;
+  flex-basis: 50%;
+  padding-left: 10px;
+  flex-grow: 1;
+}
+
+.input-error {
+  @extend %input-error;
+}

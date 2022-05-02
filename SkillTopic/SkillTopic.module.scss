@@ -1,0 +1,64 @@
+@import "../../styles/vars.scss";
+@import "../../styles/font-mixins.scss";
+@import "../../styles/samples.scss";
+@import "../../styles/animations.scss";
+
+.header {
+  display: flex;
+}
+.section {
+  display: flex;
+  width: 100%;
+  padding: 0 10px;
+  align-items: center;
+
+  @media #{$screen-sm-wide} {
+    flex-direction: column;
+  }
+}
+.wrapper {
+  padding: 10px 0;
+  margin: 10px 0;
+  width: 100%;
+  display: inline-block;
+}
+
+.name {
+  @include main-text;
+  text-transform: capitalize;
+  flex-grow: 1;
+  overflow-wrap: anywhere;
+  padding-right: 10px;
+
+  @media #{$screen-sm-wide} {
+    padding: 0;
+  }
+}
+
+.rating {
+  @media #{$screen-sm-wide} {
+    padding-top: 10px;
+  }
+}
+
+.btn-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  border-left: 1px solid $inactive-color;
+
+  @media #{$screen-xs-wide} {
+    padding: 0;
+    margin: 0;
+  }
+  @media print {
+    display: none;
+  }
+}
+
+.close-btn {
+  @extend %tab-close-btn;
+  margin: 0 5px;
+  font-size: 12px;
+}

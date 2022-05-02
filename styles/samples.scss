@@ -1,0 +1,63 @@
+@import "./vars.scss";
+
+%input-field {
+  @include main-text;
+
+  height: 20px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid $secondary-color;
+  width: 100%;
+  font-style: italic;
+
+  &:focus {
+    border-color: $main-color;
+    background-color: $main-light-color;
+  }
+}
+%input-error {
+  border-color: $danger-color;
+  background-color: rgba($color: $danger-color, $alpha: 20%);
+
+  &:focus {
+    border-color: $danger-color;
+    background-color: rgba($color: $danger-color, $alpha: 20%);
+  }
+}
+
+%tab-close-btn {
+  font-size: 16px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: $secondary-color;
+  border-radius: 50%;
+  background-color: white;
+
+  &:hover {
+    color: black;
+  }
+}
+%action-btn {
+  line-height: 30px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid $action-color;
+  color: $action-color;
+  font-size: 16px;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  transition: $hover-time-btn background-color, $hover-time-btn color;
+  user-select: none;
+
+  &:hover {
+    color: white;
+    background-color: $action-color;
+    transition: $hover-time-btn background-color, $hover-time-btn color;
+  }
+}
