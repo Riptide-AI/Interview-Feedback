@@ -13,8 +13,7 @@
     "classnames": "^2.3.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-scripts": "5.0.1",
-    "react-to-print": "^2.14.6"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,9 +21,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "lint:js": "eslint ./**/*.{js,jsx}  --color",
-    "prettier": "prettier ./**/*.{js,jsx} --write",
-    "lint:style": "stylelint ./**/*.scss --fix --color"
+    "lint:js": "eslint ./src/**/*.{js,jsx}  --color",
+    "prettier": "prettier ./src/**/*.{js,jsx} --write",
+    "lint:style": "stylelint ./src/**/*.scss --fix --color"
   },
   "eslintConfig": {
     "extends": [
@@ -62,11 +61,11 @@
     "stylelint-scss": "^4.1.0"
   },
   "lint-staged": {
-    "./**/*.{js,jsx}": [
+    "./src/**/*.{js,jsx}": [
       "npm run lint:js",
       "npm run prettier"
     ],
-    "./**/*.scss ": [
+    "./src/**/*.scss ": [
       "npm run lint:style"
     ]
   }
